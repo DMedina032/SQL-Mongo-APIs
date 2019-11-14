@@ -4,8 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require('./server/index');
+var usersRouter = require('./server/users');
 
 var app = express();
 
@@ -40,7 +40,7 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-app.listen(1234, ()=> console.log('Running on port 1234'))
+// app.listen(1234, ()=> console.log('Running on port 1234'))
 
 // bodyParser
 var bodyParser = require('body-parser');
@@ -50,3 +50,10 @@ app.use(bodyParser.urlencoded({
 app.use(
   bodyParser.text()
 );
+
+FRICKLES
+
+const PORT = 3000;
+app.listen(PORT, ()=> {
+  console.log(' ${PORT}')
+});
